@@ -1,0 +1,136 @@
+/* tendra una imagen de fondo con un tipo de fuente y la letra sera de color blanco   */
+body
+{
+	background-image: url("images/img1.jpg"); 
+	background-size: cover;
+	font-family: "Helvetica, arial";
+	color: white
+}
+
+/* todo lo que este en el id(contenido) tendra ancho margen y texto centrado  */
+#contenido
+{
+	width: 960px;		
+	margin: 0 auto;
+	text-align: center;
+}
+/* todo el texto que este en la etiqueta h1 sera rojo con un estilo de letra */
+h1
+{
+	color: red;
+	font-family: 'Russo One', 'sans-serif';
+}
+/* Todo el texto que este con la etiqueta h2 se centrara  */
+h2{ text-align: center;}
+
+header hgroup h1
+{
+	/* Lo siguiente coloca un borde en la parte inferior del 
+	titulo de la pagina, en este caso el titlo es ls etiqueta h1 */
+	border-bottom: solid;
+	padding-bottom: 10px;
+	border-width: 1px;
+	border-color: #1d1d1d;
+	text-shadow: 0px 0px 30px rgba(0,0,0,0.5);
+}
+
+/* En la barra de navegación la posicion será relativa, el margen auto y le daremos una altura y una anchura */
+nav {
+    position: relative;
+    margin: auto;
+    width: 1000px;
+    height: 50px;
+    
+}
+/* la clase botones tendra un alto y ancho */
+nav .botones{
+	
+	width: 200px;
+	height: 50px;
+	
+}
+
+/* Clase  botones: será flotante a la izquierda junto con una altura, anchura, un margen, color de fondo el texto será centrado, y
+ la línea de la letra más gruesa */
+
+.botones {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	height: 60px;
+	background: black;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .4s ease all;
+	position: relative;
+	overflow: hidden;
+}
+
+.botones::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(-100% - 80px);
+    border-bottom: 80px solid rgb(153, 104, 238);
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out all;
+}
+
+.botones:hover::after{
+    left: 0;
+}
+
+
+#textoPr
+{
+	
+   /*Tamaño de fondo negro */
+	width: 900px;
+	height: 550px;
+	background-color: #1d1d1d;
+	color: #fff;
+	margin: 0 auto;
+	text-align: left;
+	/* Esto seirve para redeondear las esquinas del contenedor	*/
+	border-radius: 20px;
+	/* Esto sirve para separar el texto del borde	*/
+	padding: 20px;
+}
+
+/* Darle formato a las tablas de la pagina  */
+table 
+{
+	border: 1px;
+
+}
+
+/* en el apartado de la tabla th todo el texto que se encuentre sera centrado  */
+table th { text-align: center; }
+
+/* las imagenes de la tabla tendran un alto y ancho con posicion  */
+table tr td img
+{width: 100px;
+height: 100px;
+position: relative;
+}
+/* la tabla tendra un borde de 1px de color azul */
+table, th, td {
+  border:1px solid blue;
+}
+
+
+
+
+ /* Todo el texto que este en la etiqueta (section) estara centrado */
+section
+{
+	text-align: center;
+}
